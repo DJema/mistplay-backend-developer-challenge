@@ -17,7 +17,8 @@ Request Body: {
 This implementation assumes 10 results per page. So each index has 10 results.
 
 */
-exports.search = function(req, res){
+exports.search = function(req, res, next){
+
   let query = req.body.query;
   let page = req.body.page;
 
@@ -71,5 +72,9 @@ exports.search = function(req, res){
       filteredDataByPage.push(filteredData[i]);
     } 
   }
-  res.send(filteredDataByPage);
+  try{
+      res.send(filteredDataByPage);
+  } catch (err){
+      console.log(next (err));
+  }
 }
