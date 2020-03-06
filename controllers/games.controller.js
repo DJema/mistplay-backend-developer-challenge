@@ -43,7 +43,7 @@ exports.search = function(req, res){
     return function(a, b) { 
       
         // If the values are similar, display the more popular games first
-        if(Math.abs(a[similarityScore] - b[similarityScore]) <= 0.12){
+        if(Math.abs(a[similarityScore] - b[similarityScore]) <= 0.05){
           if (a[ratingCount] > b[ratingCount]) {  
             return -1;  
           } else if (a[ratingCount] < b[ratingCount]) {  
