@@ -1,6 +1,6 @@
 # mistplay-backend-developer-challenge
 
-API ENDPOINT: http://localhost:3000/games/search
+API endpoint for getting results on the search screen: http://localhost:3000/games/search
 
 Request Body: {
   query : String,
