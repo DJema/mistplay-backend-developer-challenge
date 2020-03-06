@@ -14,3 +14,9 @@ Here is an example request.
 
 
 ![Alt text](postman_example.png?raw=true "Example of search request")
+
+To start the server, simply run the following command:
+
+> node app.js
+
+In the root directory.
